@@ -28,17 +28,26 @@ This project evolved from the [legacy deeptendies library](https://github.com/de
 | **Coherence Metrics** | Quantum-inspired time-series analysis |
 | **Entanglement Weights** | Cross-asset correlation modeling |
 | **Trade Signals** | Confidence-scored buy/sell/hold recommendations |
+| **Boomer Mode** | Triple historical backtest verification (Bear/Bull/Neutral) |
+| **Modern Signal Stack** | Social sentiment, on-chain, congressional, GitHub, FED signals |
+| **TradingAgents Integration** | Multi-agent LLM framework integration |
 
 ## Architecture
 
 ```
 src/
 ├── core.ts           # QuantumFinanceAgent main class
-└── quantum/
-    ├── coherence.ts  # Quantum state calculations (coherence, entanglement)
-    ├── regime.ts     # Market regime detection
-    ├── portfolio.ts  # Portfolio optimization
-    └── signals.ts    # Trade signal generation
+├── index.ts          # CLI entry point
+├── core/
+│   └── alt_data.ts   # Modern Signal Stack (alternative data)
+├── quantum/
+│   ├── coherence.ts  # Quantum state calculations (coherence, entanglement)
+│   ├── regime.ts     # Market regime detection
+│   ├── portfolio.ts  # Portfolio optimization
+│   ├── signals.ts    # Trade signal generation
+│   └── backtest.ts   # Boomer Mode backtest engine
+└── integrations/
+    └── trading_agents_bridge.ts  # TradingAgents LLM integration
 ```
 
 ## Usage Example
@@ -65,19 +74,9 @@ console.log(`Signals: ${result.signals.length}`);
 console.log(`Portfolio Value: $${result.portfolio.metrics.totalValue}`);
 ```
 
-## Meow Orchestrator Integration
-
-Invoke via sessions_spawn:
-
-```
-task: "Run qtendies quantum finance analysis"
-runtime: subagent
-cwd: /home/node/.openclaw/workspace/shared/scratch/qtendies
-```
-
 ## Configuration
 
-Default risk parameters (non-negotiable):
+Default risk parameters:
 - Max volatility: 15%
 - Max position size: 5%
 - Max positions: 20
@@ -93,3 +92,4 @@ See `config/agent.json` for full configuration options.
 - `docs/context.md` - Project context and evolution
 - `docs/ROADMAP_0_TO_1.md` - Initial development roadmap
 - `docs/ROADMAP_1_TO_100.md` - Future capabilities
+- `docs/CODE_REVIEW.md` - Production readiness audit
