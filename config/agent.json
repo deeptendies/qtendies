@@ -1,0 +1,46 @@
+{
+  "agent": {
+    "name": "qtendies",
+    "version": "1.0.0",
+    "description": "Quantum Agentic Finance Agent - Quantum-inspired portfolio optimization and market regime detection",
+    "capabilities": [
+      "quantum_portfolio_optimization",
+      "market_regime_detection",
+      "trade_signal_generation",
+      "risk_management",
+      "multi_asset_analysis",
+      "quantum_coherence_metrics",
+      "entanglement_based_correlation"
+    ]
+  },
+  "quantum": {
+    "dimensions": 1024,
+    "coherenceThreshold": 0.5,
+    "entanglementBoost": 0.1
+  },
+  "risk": {
+    "maxVolatility": 0.15,
+    "maxPositionSize": 0.05,
+    "maxPositions": 20,
+    "riskFreeRate": 0.045,
+    "varConfidence": 0.95,
+    "varHorizonDays": 1
+  },
+  "market": {
+    "regimes": ["bull", "bear", "sideways", "crisis", "unknown"],
+    "minHistoryLength": 20,
+    "momentumWindow": 50,
+    "volumeWindow": 20
+  },
+  "execution": {
+    "minConfidence": 0.5,
+    "maxSignalsPerCycle": 10,
+    "cycleIntervalMinutes": 5,
+    "jobCheckIntervalSeconds": 60
+  },
+  "logging": {
+    "level": "info",
+    "auditFile": "/tmp/meow_work.log",
+    "statusIntervalMinutes": 5
+  }
+}

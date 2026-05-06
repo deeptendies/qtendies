@@ -1,0 +1,26 @@
+{
+  "name": "qtendies",
+  "version": "1.0.0",
+  "description": "Quantum Agentic Finance Claude Skill - Agentic quantum-enhanced financial analysis and portfolio optimization",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "npx tsx src/index.ts",
+    "build": "tsc",
+    "test": "vitest",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.4.0"
+  },
+  "keywords": [
+    "quantum",
+    "finance",
+    "agentic",
+    "portfolio-optimization",
+    "claude-skill"
+  ]
+}
