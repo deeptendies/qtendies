@@ -13,7 +13,7 @@ import {
 import { detectRegime, type MarketRegime } from "./quantum/regime.js";
 import { optimizePortfolio, shouldRebalance, type Position, type PortfolioMetrics } from "./quantum/portfolio.js";
 import { generateSignals, type TradeSignal, type AssetData } from "./quantum/signals.js";
-import { verify3x, runBoomerMode, isBoomerRequired, type BacktestRegime, type BoomerResult } from "./quantum/backtest.js";
+import { verify3x, runBoomerMode, isBoomerRequired, seedBacktest, unseedBacktest, type BacktestRegime, type BoomerResult } from "./quantum/backtest.js";
 import {
   fetchAltSignals,
   fetchFedSignals,
@@ -28,7 +28,7 @@ import {
 export { type MarketRegime, type TradeSignal, type AssetData, type Position, type PortfolioMetrics };
 export { type BacktestRegime, type BoomerResult };
 export { type AltSignalResult, type SignalSource };
-export { runBoomerMode, isBoomerRequired };
+export { runBoomerMode, isBoomerRequired, seedBacktest, unseedBacktest, verify3x };
 export { fetchAltSignals, fetchFedSignals, generateAltSignalReport };
 
 export interface QuantumPortfolio {

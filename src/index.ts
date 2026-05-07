@@ -101,7 +101,6 @@ async function runAgentCycle(cycleNumber: number): Promise<void> {
 
   log("INFO", `=== Cycle ${cycleNumber} Complete ===`);
 }
-}
 
 async function runAgentLoop(): Promise<void> {
   log("INFO", "Quantum Agentic Finance Agent starting...");
